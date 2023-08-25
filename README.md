@@ -1,7 +1,3 @@
-Certainly! Here's a README file that you can include in your GitHub repository "Regression-Algorithms":
-
----
-
 # Regression Algorithms Exploration on California Housing Dataset
 
 This repository contains Python code that explores and compares different regression algorithms using the California Housing dataset. The primary goal is to predict housing prices based on various features present in the dataset. The code includes the implementation of Linear Regression, Ridge Regression, and Lasso Regression algorithms, along with visualization and evaluation.
