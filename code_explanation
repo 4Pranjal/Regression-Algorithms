@@ -1,0 +1,43 @@
+**Exploring Regression Algorithms on California Housing Dataset**
+
+This code revolves around the exploration and comparison of various regression algorithms, including Linear Regression, Ridge Regression, and Lasso Regression, using the California Housing dataset. The primary objective is to predict housing prices based on multiple features present in the dataset.
+
+1. **Data Loading and Preprocessing:**
+   - The California Housing dataset is loaded using the `fetch_california_housing` function from `sklearn.datasets`.
+   - A Pandas DataFrame named `dataset` is created to hold the dataset's contents.
+   - Column names are assigned to the `dataset` DataFrame using feature names from the dataset.
+
+2. **Dataset Splitting and Preprocessing:**
+   - The independent features (`X`) are assigned the entire `dataset`, and the dependent feature (`y`) is assigned the target values from the dataset.
+   - The dataset is divided into training and testing sets using the `train_test_split` function from `sklearn.model_selection`.
+   
+3. **Standardization of Features:**
+   - The dataset features are standardized using `StandardScaler` from `sklearn.preprocessing`.
+   - Both training and testing sets are transformed using the scaler to ensure consistent scaling.
+
+4. **Linear Regression:**
+   - A Linear Regression model is initialized.
+   - Cross-validation is performed using the `cross_val_score` function to evaluate the model's performance.
+   - The mean of the negative mean squared error (MSE) scores obtained from cross-validation is calculated as an evaluation metric.
+   - Predictions are made using the trained Linear Regression model on the testing set.
+   - A distribution plot is created to visualize the residuals (difference between predictions and actual values).
+   - The coefficient of determination (R-squared) score is calculated using `r2_score` to quantify the model's performance.
+
+5. **Ridge Regression:**
+   - A Ridge Regression model is initialized.
+   - Hyperparameter tuning is performed using GridSearchCV to find the optimal alpha value.
+   - The best parameters and the corresponding best score are printed.
+   - Predictions are made using the trained Ridge Regression model on the testing set.
+   - A distribution plot is created to visualize the residuals.
+   - The R-squared score is calculated for evaluating the Ridge Regression model.
+
+6. **Lasso Regression:**
+   - A Lasso Regression model is initialized.
+   - Similar to Ridge Regression, hyperparameter tuning is performed using GridSearchCV.
+   - The best parameters and best score are printed.
+   - Predictions are made using the trained Lasso Regression model on the testing set.
+   - A distribution plot is created to visualize the residuals.
+   
+---
+
+This code offers a comprehensive exploration of Linear Regression, Ridge Regression, and Lasso Regression on the California Housing dataset. Each algorithm is trained, evaluated, and visualized to compare their predictive capabilities and residuals' behavior. The use of cross-validation, hyperparameter tuning, and visualization enhances the understanding of these regression techniques' effectiveness in predicting housing prices.
